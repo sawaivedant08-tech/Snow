@@ -239,13 +239,10 @@ scratchCanvas.addEventListener('pointermove', scratch);
 window.addEventListener('pointerup', ()=>{ scratching=false});
 
 // ====== Music ======
-const song = document.getElementById('song');
-const filePick = document.getElementById('filePick');
-filePick.addEventListener('change', (e)=>{
-  const file = e.target.files?.[0]; if(!file) return;
-  song.src = URL.createObjectURL(file); song.classList.remove('hidden'); song.play().catch(()=>{});
-});
-document.getElementById('playBtn').addEventListener('click', ()=>{ if(song.src){ song.paused ? song.play() : song.pause(); } else { alert('Pick a song first ✨'); }});
+<audio controls autoplay loop>
+  <source src="https://raw.githubusercontent.com/sawaivedant08-tech/Snow/main/Snow/audiio.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
 // ====== Start Button ======
 document.getElementById('startBtn').addEventListener('click', ()=>{
