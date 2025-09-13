@@ -255,12 +255,14 @@ document.getElementById('startBtn').addEventListener('click', ()=>{
 
 // ====== PHOTO GALLERY ======
 const galleryWrapper = document.getElementById('gallery');
+
 for (let i = 1; i <= 10; i++) {
   const img = document.createElement('img');
-  img.src = `./image${i}.jpg`;  // ./ ensures GitHub Pages reads from the same folder as index.html
+  img.src = `https://raw.githubusercontent.com/sawaivedant08-tech/Snow/main/Snow/image${i}.jpg`;
   img.alt = `Photo ${i}`;
   galleryWrapper.appendChild(img);
 }
+
 let scrollIndex=0;
 const scrollStep=110;
 document.getElementById('prevBtn').addEventListener('click',()=>{scrollIndex=Math.max(scrollIndex-1,0); galleryWrapper.style.transform=`translateX(${-scrollIndex*scrollStep}px)`;});
